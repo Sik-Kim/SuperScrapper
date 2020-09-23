@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Job Search </title>
+  </head>
+  <body>
+    <form action="/report" method="get">
+    <h1>Job Search</h1>
+    <input placeholder = 'Search for a job' required name = "word"/><button>Click</button>
+    </form>
+  </body>
+</html>
+  <!-- html에 py에서 불러온 word를 가져오는 방법 <결국 우리눈에 보여지는건 html 화면인데 word가 안보이면 안되자나?? 계속 바뀌는 값이니 일일히 html에 적을수도 없는 노릇이고 -->
+  <!-- 어떻게 데이터를 py -> html로 넘길 수 있을까? -->
+  
+
+<!-- flask가 html 파일을 쭉 보고 있다가 (변수도 쭉 보고) 변수들을 {{}}안에 넣어줘서 사용하한테 보여주는거. 이게 바로 rendering이라는 작업. flask는 지금 html파일을 렌더링하고 이 {{}} 이 녀석이 내가 py에서 설정한 변수를 넣어주는 것.  -->

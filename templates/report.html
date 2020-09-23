@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Job Search </title>
+    <style>
+      section {
+        display:grid;
+        gap:20px;
+        grid-template-columns: repeat(4, 1fr);
+        border: 1px solid black;
+      }
+
+    </style>
+  </hea>
+  <body>
+    <h1>Search Results</h1>
+    <h3>Found {{resultsNumber}} results for: {{searchingBy}} </h3>
+    <a href="/export?word={{searchingBy}}">Export to CSV!!</a>
+    <section>
+      <h4>Title</h4>
+      <h4>Company</h4>
+      <h4>Location</h4>
+      <h4>Link</h4>
+      {% for potato in jobs %}
+      <!-- jobs는 render template에서 받은것! -->
+      <span>{{potato.title}}</span>
+      <span>{{potato.company}}</span>
+      <span>{{potato.location}}</span>
+      <a href="{{potato.apply_link}}" target="_blank">Apply</a>
+      {% endfor %}
+
+      <!-- jobs가 존재하지 않으면 작동하진 않을거야. 그래서 report.html에 jobs를 잘 넘겨줘야하지 -->
+    </section>
+
+  <!-- html에 py에서 불러온 word를 가져오는 방법 <결국 우리눈에 보여지는건 html 화 면인데 word가 안보이면 안되자나?? 계속 바뀌는 값이니 일일히 html에 적을수도 없는 노릇이고 -->
+  <!-- 어떻게 데이터를 py에서 html로 넘길 수 있을까? -->
+
+  </body>
+</html>
