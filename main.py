@@ -34,7 +34,7 @@ def report():
   return render_template("report.html", searchingBy = word, resultsNumber=len(jobs),
   jobs = jobs
   )
-# @는 데코레이터를 뜻하지. 이건 바로 아래에 있는 함수를 찾아서 그 함수를 decorate(꾸미다) 해주는 역할이지.
+# @는 데코레이터를 뜻함. 이건 바로 아래에 있는 함수를 찾아서 그 함수를 decorate(꾸미다) 해주는 역할이지.
 # 만약에 @ 아래에 함수말고 다른게 있으면 error가 날꺼임. 왜냐면 @는 바로 아래 함수만 받아들이기 때문이지.
 
   
@@ -57,8 +57,6 @@ def export():
     return send_file("jobs.csv")
   except :
     return redirect("/")
-    
   
-
 
 app.run(host = '0.0.0.0')

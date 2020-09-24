@@ -7,7 +7,7 @@
         display:grid;
         gap:20px;
         grid-template-columns: repeat(4, 1fr);
-        border: 1px solid black;
+        border: 2px solid black;
       }
 
     </style>
@@ -28,7 +28,7 @@
       <span>{{potato.location}}</span>
       <a href="{{potato.apply_link}}" target="_blank">Apply</a>
       {% endfor %}
-
+      <!-- potato든 뭐든 이름 상관없음 -->
       <!-- jobs가 존재하지 않으면 작동하진 않을거야. 그래서 report.html에 jobs를 잘 넘겨줘야하지 -->
     </section>
 
